@@ -15,3 +15,18 @@ ullint iterative_factorial(ullint n) {
     }
     return r;
 }
+
+// with int data type
+int recursive_factorial(int n) {
+    if(n == 0) return 1;
+    else return n * recursive_factorial(n-1);
+}
+
+// with int data type
+int iterative_factorial(int n) {
+    int r = 1;
+    for (int i = 2; i <= n; i++) {
+        r *= i;
+    }
+    return r;
+}
