@@ -30,3 +30,19 @@ int iterative_factorial(int n) {
     }
     return r;
 }
+
+// ---------WRONG RECURSIVE FUNCTIONS------------
+
+// If there is no base case, the loop does not know where to stop.
+int recursive_factorial(int n) {
+    return n * recursive_factorial(n-1);
+}
+
+// This function also has a base case but due to a logic error, the base case is never satisfied.
+// as long as n > 0
+int recursive_factorial(int n) {
+    if(n == 0) return 1;
+    else return n * recursive_factorial(n+1);
+}
+
+// -------------------------------------
